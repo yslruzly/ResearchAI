@@ -100,7 +100,7 @@ function AccordionItem({
 export function FaqAccordion({ items, className }: { items: FaqItem[]; className?: string }) {
   const rawId = React.useId();
   const baseId = `faq-${rawId.replace(/:/g, "")}`;
-  const [openIndex, setOpenIndex] = React.useState<number | null>(0);
+  const [openIndex, setOpenIndex] = React.useState<number | null>(null);
 
   return (
     <div className={cn("flex w-full flex-col gap-2.5", className)}>

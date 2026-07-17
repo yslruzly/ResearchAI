@@ -18,17 +18,6 @@ const geistMono = localFont({
   display: "swap",
 });
 
-// serif, for headlines and report titles
-const newsreader = localFont({
-  src: [
-    { path: "./fonts/Newsreader-Variable.ttf", style: "normal" },
-    { path: "./fonts/Newsreader-Italic-Variable.ttf", style: "italic" },
-  ],
-  variable: "--font-display",
-  weight: "200 800",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
   title: "ResearchAI — Web Research, Summarized",
   description:
@@ -52,7 +41,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${newsreader.variable}`}>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>{children}</body>
     </html>
   );

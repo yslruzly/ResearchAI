@@ -10,7 +10,8 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-body)", "sans-serif"],
-        display: ["var(--font-display)", "serif"],
+        // same face as body; .font-display in globals.css adds weight/tracking
+        display: ["var(--font-body)", "sans-serif"],
         mono: ["var(--font-mono)", "monospace"],
       },
       colors: {

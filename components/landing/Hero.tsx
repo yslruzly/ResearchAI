@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import LiquidEther from "@/components/ui/liquid-ether";
+import FloatingLines from "@/components/ui/floating-lines";
 import TypewriterText from "@/components/ui/typewriter-text";
 import PipelineDemo from "@/components/landing/PipelineDemo";
 import { MODEL_LABEL } from "@/lib/model";
@@ -8,17 +8,14 @@ import { MODEL_LABEL } from "@/lib/model";
 export default function Hero() {
   // isolate: without it the -z-10 background paints behind bg-paper
   return (
-    <section id="top" className="relative isolate flex min-h-[calc(100dvh-60px)] flex-col overflow-hidden">
-      {/* the fluid listens on window, so pointer-events-none is fine here */}
-      <div className="pointer-events-none absolute inset-0 -z-10 opacity-70 [mask-image:linear-gradient(to_bottom,black_55%,transparent)]">
-        <LiquidEther
-          colors={["#3B82F6", "#34D399", "#8B5CF6"]}
-          mouseForce={20}
-          cursorSize={100}
-          resolution={0.5}
-          autoDemo
-          autoSpeed={0.5}
-          autoIntensity={2.2}
+    <section id="top" className="relative isolate flex min-h-[calc(100dvh-60px)] snap-start flex-col overflow-hidden">
+      {/* the lines listen on window, so pointer-events-none is fine here */}
+      <div className="pointer-events-none absolute inset-0 -z-10 opacity-80 [mask-image:linear-gradient(to_bottom,black_60%,transparent)]">
+        <FloatingLines
+          linesGradient={["#3B82F6", "#34D399", "#8B5CF6"]}
+          lineCount={[7, 7, 6]}
+          lineDistance={[6, 5, 6]}
+          animationSpeed={0.8}
         />
       </div>
 
