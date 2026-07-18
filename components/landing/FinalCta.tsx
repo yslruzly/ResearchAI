@@ -5,7 +5,7 @@ import RevealText from "@/components/ui/reveal-text";
 
 export default function FinalCta() {
   return (
-    <section className="relative isolate overflow-hidden flex min-h-[calc(100dvh-60px)] snap-start flex-col justify-center py-12 md:py-16">
+    <section className="relative isolate overflow-hidden flex min-h-[calc(100dvh-60px)] flex-col justify-center py-12 md:py-16">
       <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 opacity-25 blur-2xl">
         <SiriOrb size="380px" animationDuration={28} dots={false} />
       </div>

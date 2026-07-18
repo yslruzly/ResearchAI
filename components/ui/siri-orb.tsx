@@ -43,7 +43,9 @@ export default function SiriOrb({
   const px = Number.parseInt(size.replace("px", ""), 10);
 
   const isSmall = px < 50;
-  const blur = isSmall ? Math.max(px * 0.008, 1) : Math.max(px * 0.015, 4);
+  // 2px floor, not 4: a 4px blur on a ~72px orb (the loading splash) reads as
+  // a fuzzy blob instead of plasma
+  const blur = isSmall ? Math.max(px * 0.008, 1) : Math.max(px * 0.015, 2);
   const contrast = isSmall ? Math.max(px * 0.004, 1.2) : Math.max(px * 0.008, 1.5);
   const dot = isSmall ? Math.max(px * 0.004, 0.05) : Math.max(px * 0.008, 0.1);
   const shadow = isSmall ? Math.max(px * 0.004, 0.5) : Math.max(px * 0.008, 2);

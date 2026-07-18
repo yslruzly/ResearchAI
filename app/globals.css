@@ -16,9 +16,6 @@ html {
   scroll-behavior: smooth;
   /* keep anchored sections clear of the sticky header */
   scroll-padding-top: 60px;
-  /* settle on section edges when close; proximity (not mandatory) so content
-     taller than the viewport can still be reached */
-  scroll-snap-type: y proximity;
 }
 
 body {

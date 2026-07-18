@@ -32,7 +32,7 @@ const ITEMS = [
 
 export default function Faq() {
   return (
-    <section id="faq" className="relative isolate overflow-hidden flex min-h-[calc(100dvh-60px)] snap-start flex-col justify-center py-12 md:py-16">
+    <section id="faq" className="relative isolate overflow-hidden flex min-h-[calc(100dvh-60px)] flex-col justify-center py-12 md:py-16">
       <Particles className="-z-10" />
       <div className="mx-auto w-full max-w-[760px] px-5 sm:px-7">
         <p className="mb-3 flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted">

@@ -8,7 +8,7 @@ import { MODEL_LABEL } from "@/lib/model";
 export default function Hero() {
   // isolate: without it the -z-10 background paints behind bg-paper
   return (
-    <section id="top" className="relative isolate flex min-h-[calc(100dvh-60px)] snap-start flex-col overflow-hidden">
+    <section id="top" className="relative isolate flex min-h-[calc(100dvh-60px)] flex-col overflow-hidden">
       {/* the lines listen on window, so pointer-events-none is fine here */}
       <div className="pointer-events-none absolute inset-0 -z-10 opacity-80 [mask-image:linear-gradient(to_bottom,black_60%,transparent)]">
         <FloatingLines
