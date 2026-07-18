@@ -66,7 +66,7 @@ export default function SiteHeader({
         className={cn(
           "relative flex h-full w-full max-w-full items-center gap-3.5 px-5 sm:px-7",
           "border border-x-transparent border-t-transparent border-b-white/10",
-          "bg-paper/55 backdrop-blur-xl backdrop-saturate-150 transition-all duration-300",
+          "bg-paper/70 backdrop-blur-md transition-all duration-200",
           detached &&
             "md:mt-1.5 md:h-12 md:max-w-[820px] md:rounded-full md:border-white/10 md:bg-paper/70 md:px-5 md:shadow-lg md:shadow-black/40"
         )}

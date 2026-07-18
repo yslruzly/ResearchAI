@@ -317,7 +317,9 @@ export default function FloatingLines({
     } catch {
       return; // no WebGL on this device
     }
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    // 1.5 cap: soft lines don't need retina density, and full-hero shading at
+    // 2x fights the scroll for GPU time
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
     renderer.domElement.style.width = "100%";
     renderer.domElement.style.height = "100%";
     container.appendChild(renderer.domElement);
